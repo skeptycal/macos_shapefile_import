@@ -9,6 +9,8 @@ pylint = "*"
 [packages]
 pyshp = "*"
 matplotlib = "*"
+earthpy = "*"
+geopandas = "*"
 
 [requires]
 python_version = "3.7"
