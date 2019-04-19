@@ -11,6 +11,8 @@ pyshp = "*"
 matplotlib = "*"
 earthpy = "*"
 geopandas = "*"
+numpy = "*"
+requests-xml = "*"
 
 [requires]
 python_version = "3.7"

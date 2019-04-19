@@ -1,12 +1,20 @@
 # Reading a shapefile from BASH environment using Python
 
-It looks like you are using `macOS` or `Linux`, _so I will proceed with that assumption_.
+_This is a response to a Stack Overflow question that I thought could use a few sample files and examples._
+
+---
 
 ## Test Environment Setup
 
+It looks like you are using `macOS` or `Linux`, _so I will proceed with that assumption_.
+
 _(You did not mention which OS version, IDE type, editor type, python version, python environment, virtual environtment, whether you are using jupyter, or any eccentric personalizations.)_
 
-This is what I am using for these tests: macOS 10.14.4, VSCode Code 1.33.1, Python 3.7.3, CLI, VirtualEnv 16.4.3, pipenv version 2018.11.26, and shapefile version: 2.1.0
+**_This is what I am using for these examples and tests_**: macOS 10.14.4, VSCode Code 1.33.1, Python 3.7.3, CLI, VirtualEnv 16.4.3, pipenv version 2018.11.26, and shapefile version 2.1.0
+
+---
+
+## Version checkup
 
 As of now, the latest commit to [GitHub](https://github.com/GeospatialPython/pyshp/commit/71231ddc5aa54f155d4f0563c56006fffbfc84e7) is: `Latest commit 71231dd on Feb 15`.
 
@@ -192,6 +200,16 @@ Launching subshell in virtual environment…
 
 ~/Documents/now/projects/documentation/test/my-project
 ❯  . /Volumes/Data/skeptycal/.virtualenvs/my-project-L9l-38zD/bin/activate
+
+
+
+
+$ pipenv check
+Checking PEP 508 requirements…
+Passed!
+Checking installed package safety…
+All good!
+
 ```
 
 > There are also a large number of things that can go wrong with python module importing due to the long history of the language and a desire of the maintainers to keep changes non-breaking. If all else fails, you may be running up against these python legacy issues. Here is a great overview:
@@ -204,6 +222,10 @@ Launching subshell in virtual environment…
 - I have created a short test file to catch and report errors just to be sure. The repo is located here.
 - The test program will
 - If I am trying to import a module that is not installed, I get this error: `("No module named 'shapefile'",)`
+
+[what's new python 3.7](https://docs.python.org/3/whatsnew/3.7.html#whatsnew37-asyncio-deprecated)
+
+- "When using the -m switch, the initial working directory is now added to sys.path,"
 
 ---
 
