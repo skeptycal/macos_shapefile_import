@@ -19,6 +19,8 @@ Python 3.7.3 (default, Mar 27 2019, 09:23:15)
 [Clang 10.0.1 (clang-1001.0.46.3)]
 ```
 
+>If this version is between 2.7.x and 3.6.x, you can be fairly certain that this is not the cause of problems.
+
 ---
 
 # Troubleshooting the Type of Problem
@@ -123,7 +125,9 @@ $ head -c 500 shapefile.dbf | tr -d '[:blank:]'
 
 > At this point, we are fairly confident that the files are there and they are readable ... maybe the program just isn't looking in the right place?
 ---
-### Python problems
+## Python problems
+
+### Problems using VSCode with virtual environments
 
 >FYI, I have run into problems where the VSCode IDE (and pylint) reports that a module is not found but the program runs fine. It is some problem with the IDE and linter configuration but it does not affect the normal operation of the program, only IDE functions, debugging, etc.
 
@@ -140,7 +144,7 @@ $ head -c 500 shapefile.dbf | tr -d '[:blank:]'
 
 - If the program actually won't run because the module will not import, it is good to find out why. It may be a general import error, a typing issue, an os error, or something else.
 - I have created a short test file to catch and report errors just to be sure. The repo is located here.
-- The test program will 
+- The test program will
 - If I am trying to import a module that is not installed, I get this error: `("No module named 'shapefile'",)`
 
 
